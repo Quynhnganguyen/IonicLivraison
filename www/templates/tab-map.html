@@ -1,6 +1,11 @@
  <ion-content >
-	<google-map  center="map.center" zoom="map.zoom" >
-		<marker ng-repeat="marker in markers" coords="marker" title="marker.name">
+	<google-map  center="map.center" zoom="map.zoom" options="options">
+		<marker ng-repeat="marker in markers" coords="marker" click="'onClick'" icon="marker.icon">
+			<windows show="true">
+                <div ng-non-bindable>{{title}}</div>
+               
+            </windows>
+            
         </marker>
 	</google-map>
  </ion-content>
